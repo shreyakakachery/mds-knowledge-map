@@ -1,0 +1,17 @@
+id,label,name
+511,DSCI 511,
+523,DSCI 523,Data Wrangling
+521,DSCI 521,Computing Platforms for Data Science
+551,DSCI 551,Descriptive Statistics and Probability
+512,DSCI 512,Algorithms and Data Structures
+552,DSCI 552,Statistical Inference and Computation I
+531,DSCI 531,Data Visualization I
+571,DSCI 571,Supervised Learning I
+573,DSCI 573,Feature and Model Selection
+561,DSCI 561,Regression I
+522,DSCI 522,Data Science Workflows
+513,DSCI 513,Database and Data Retrieval
+572,DSCI 572,Supervised Learning II
+562,DSCI 562,Regression II
+542,DSCI 542,Communication in Data Science
+524,DSCI 524,Collaborative Software Development
