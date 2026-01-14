@@ -1,0 +1,14 @@
+name: mds-map
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - r-base=4.3        
+  - r-visnetwork     
+  - r-readr
+  - r-jsonlite         
+  - r-rmarkdown      
+  - r-htmlwidgets     
+  - pandas       
+  - pip
