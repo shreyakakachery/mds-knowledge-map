@@ -1,0 +1,28 @@
+---
+title: "MDS Knowledge Map"
+format: 
+  html:
+    page-layout: full
+---
+
+# Hello this is test
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(visNetwork)
+library(readr)
+
+# Load data
+nodes <- read_csv("data/nodes.csv")
+edges <- read_csv("data/edges.csv")
+
+# Create the interactive map
+visNetwork(nodes, edges, width = "100%", height = "700px") %>%
+  visNodes(shape = "dot", shadow = FALSE) %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visHierarchicalLayout(direction = "LR", levelSeparation = 150) %>%
+  visPhysics(stabilization = TRUE)
+```
