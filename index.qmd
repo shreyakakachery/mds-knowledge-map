@@ -61,7 +61,7 @@ transform_map_data <- function(data) {
 # --- 3. THE PLOTTER ---
 # Purpose: Generate the interactive HTML visualization
 plot_knowledge_map <- function(transformed_data) {
-  visNetwork(transformed_data$nodes, transformed_data$edges) %>%
+  visNetwork(transformed_data$nodes, transformed_data$edges, width = "100%", height = "800px") %>%
     visPhysics(enabled = FALSE) %>% # Disable physics since we have X/Y
     visOptions(
       highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
