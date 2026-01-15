@@ -6,3 +6,7 @@ website:
   navbar:
     left:
       - index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/shreyakakachery/mds-knowledge-map
+        aria-label: GitHub
