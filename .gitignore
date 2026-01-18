@@ -1,7 +1,20 @@
+# --- R / RStudio ---
 .Rproj.user
 .Rhistory
 .RData
+.Ruserdata
+
+# --- Python / Jupyter ---
 .ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
+
+# --- Quarto & Web Rendering ---
+.quarto/
 _site/
-/.quarto/
+index_files/
+*_files/
+
+# --- IDEs & Editors ---
 .vscode/
+.DS_Store
