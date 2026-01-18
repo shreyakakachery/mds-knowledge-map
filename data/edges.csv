@@ -1,20 +1,20 @@
-from,to
-521,542
-521,523
-521,511
-521,522
-523,551
-523,531
-511,531
-511,512
-511,513
-511,571
-522,524
-571,573
-573,572
-551,552
-551,562
-552,561
-561,562
-561,573
-562,572
+from,to,concepts
+521,542,GitHub;Quarto
+521,523,RStudio;Github
+521,511,JupyterLab;Jupyter Notebook;Github
+521,522,Jupyter Notebook;Quarto;Github
+523,551,R;RStudio
+523,531,R
+511,531,Python
+511,512,Python
+511,513,Python
+511,571,Python
+522,524,Github Workflows;Iterative Design;Modular Functions
+571,573,Linear Regression;Features
+573,572,Feature Engineering
+551,552,Normal Distribution
+551,562,MLE
+552,561,Hypothesis Testing;Bootstrapping
+561,562,OLS
+561,573,"Loss (L1, L2);Linear Regression"
+562,572,Minimize Loss
