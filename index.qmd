@@ -36,6 +36,7 @@ transform_map_data <- function(data) {
       
       # Visual Styling
       label = label,
+      title = name,
       shape = "box",
       color = I(list(list(
         background = "#D2E5FF", 
