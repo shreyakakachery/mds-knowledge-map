@@ -17,6 +17,12 @@ library(dplyr)
 library(readr)
 
 # --- 1. THE READER ---
+#' Load raw data from files
+#'
+#' @param nodes_path Path to nodes.csv file.
+#' @param edges_path Path to edges.csv file.
+#'
+#' @return A list containing two data frames: nodes and edges.
 read_map_data <- function(nodes_path, edges_path) {
   nodes <- read_csv(nodes_path, show_col_types = FALSE)
   edges <- read_csv(edges_path, show_col_types = FALSE)
@@ -24,6 +30,12 @@ read_map_data <- function(nodes_path, edges_path) {
 }
 
 # --- 2. THE TRANSFORMER ---
+#' Converts grid coordinates into a pixel-based coordinate system 
+#' and applies visual properties (colors, shapes, tooltips) to nodes and edges.
+#'
+#' @param data A list containing 'nodes' and 'edges' data frames.
+#'
+#' @return A list with modified data frames.
 transform_map_data <- function(data) {
   data$nodes <- data$nodes %>%
     mutate(
@@ -56,6 +68,11 @@ transform_map_data <- function(data) {
 }
 
 # --- 3. THE PLOTTER ---
+#' Generate interactive network graph
+#'
+#' @param transformed_data A list containing processed nodes and edges.
+#'
+#' @return A visNetwork HTML widget object.
 plot_knowledge_map <- function(transformed_data) {
   visNetwork(transformed_data$nodes, transformed_data$edges, width = "100%", height = "800px") %>%
     visPhysics(enabled = FALSE) %>% 
