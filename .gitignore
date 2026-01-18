@@ -10,7 +10,7 @@ __pycache__/
 .pytest_cache/
 
 # --- Quarto & Web Rendering ---
-.quarto/
+/.quarto/
 _site/
 index_files/
 *_files/
