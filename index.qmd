@@ -53,7 +53,8 @@ transform_map_data <- function(data) {
     mutate(
       arrows = "to",
       color = "#848484",
-      title = gsub(";", "<br>", concepts),
+      title = paste0("<b>", from, " → ", to, "</b><br>• <i>",  ## NOTE: this is hacky, use purrr::map_chr() or custom function
+               gsub(";", "<br>• ", concepts), "</i>"),
       smooth = I(list(list(type = "curvedCCW", roundness = 0.2)))
     )
     
