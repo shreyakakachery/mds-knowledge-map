@@ -17,7 +17,6 @@ library(dplyr)
 library(readr)
 
 # --- 1. THE READER ---
-# Purpose: Load raw data from files
 read_map_data <- function(nodes_path, edges_path) {
   nodes <- read_csv(nodes_path, show_col_types = FALSE)
   edges <- read_csv(edges_path, show_col_types = FALSE)
@@ -25,16 +24,12 @@ read_map_data <- function(nodes_path, edges_path) {
 }
 
 # --- 2. THE TRANSFORMER ---
-# Purpose: Turn grid (1, 2, 3) into pixels and add styling
 transform_map_data <- function(data) {
-  # Process Nodes
   data$nodes <- data$nodes %>%
     mutate(
-      # Scaling the grid coordinates
       x = column * 250, 
       y = row * 150,
       
-      # Visual Styling
       label = label,
       title = name,
       shape = "box",
@@ -45,10 +40,9 @@ transform_map_data <- function(data) {
       ))),
       font = I(list(list(face = "Arial", size = 18))),
       shadow = TRUE,
-      fixed = TRUE # prevents physics engine from moving your manual X/Y
+      fixed = TRUE
     )
   
-  # Process Edges
   data$edges <- data$edges %>%
     mutate(
       arrows = "to",
@@ -62,10 +56,9 @@ transform_map_data <- function(data) {
 }
 
 # --- 3. THE PLOTTER ---
-# Purpose: Generate the interactive HTML visualization
 plot_knowledge_map <- function(transformed_data) {
   visNetwork(transformed_data$nodes, transformed_data$edges, width = "100%", height = "800px") %>%
-    visPhysics(enabled = FALSE) %>% # Disable physics since we have X/Y
+    visPhysics(enabled = FALSE) %>% 
     visOptions(
       highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE),
       nodesIdSelection = TRUE
