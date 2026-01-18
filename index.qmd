@@ -53,6 +53,7 @@ transform_map_data <- function(data) {
     mutate(
       arrows = "to",
       color = "#848484",
+      title = gsub(";", "<br>", concepts),
       smooth = I(list(list(type = "curvedCCW", roundness = 0.2)))
     )
     
