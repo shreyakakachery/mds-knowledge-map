@@ -5,7 +5,7 @@ format:
     page-layout: full
 ---
 
-# Hello this is test
+## Arbitrary Arrangement 
 
 ```{r}
 #| echo: false
@@ -87,4 +87,64 @@ plot_knowledge_map <- function(transformed_data) {
 raw_data <- read_map_data("data/nodes.csv", "data/edges.csv")
 ready_data <- transform_map_data(raw_data)
 plot_knowledge_map(ready_data)
+```
+
+## Block-wise Arrangement 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+# --- 2. THE TRANSFORMER 2 (Block-Based) ---
+#' Converts block numbers into columns and auto-stacks nodes vertically.
+#'
+#' @param data A list containing 'nodes' and 'edges' data frames.
+#' @return A list with modified data frames for the block-based view.
+transform_map_data2 <- function(data) {
+  data$nodes <- data$nodes %>%
+    group_by(block) %>%
+    mutate(
+      x = block * 350,
+      y = row_number() * 120,
+      
+      label = label,
+      title = name,
+      shape = "box",
+      color = I(list(list(background = "#E8F5E9", border = "#4CAF50", highlight = "#FFB347"))),
+      font = I(list(list(face = "Arial", size = 18))),
+      shadow = TRUE,
+      fixed = TRUE
+    ) %>%
+    ungroup()
+  
+  data$edges <- data$edges %>%
+    mutate(
+      arrows = "to",
+      color = "#848484",
+      title = paste0("<b>", from, " → ", to, "</b><br>• <i>", 
+                     gsub(";", "<br>• ", concepts), "</i>"),
+      smooth = I(list(list(type = "curvedCCW", roundness = 0.2)))
+    )
+    
+  return(data)
+}
+
+# --- 3. THE PLOTTER 2 (Block-Based) ---
+#' Generate the block-structured interactive graph.
+#'
+#' @param transformed_data A list containing processed nodes and edges.
+#' @return A visNetwork HTML widget object.
+plot_knowledge_map2 <- function(transformed_data) {
+  visNetwork(transformed_data$nodes, transformed_data$edges, width = "100%", height = "600px") %>%
+    visPhysics(enabled = FALSE) %>% 
+    visOptions(highlightNearest = list(enabled = TRUE, hover = TRUE)) %>%
+    visInteraction(dragNodes = FALSE, zoomView = TRUE)
+}
+
+
+# --- EXECUTION ---
+ready_data_block <- transform_map_data2(raw_data)
+plot_knowledge_map2(ready_data_block)
 ```
