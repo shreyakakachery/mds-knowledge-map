@@ -5,7 +5,14 @@ format:
     page-layout: full
 ---
 
-## Arbitrary Arrangement 
+## 1 Arbitrary Arrangement 
+
+### Features:
+
+- hover on a node to see course name
+- hover on an edge to see the connecting concepts 
+- click on a node to see all of its 'to' and 'from' connections
+- use the dropdown below to select a course
 
 ```{r}
 #| echo: false
@@ -89,7 +96,7 @@ ready_data <- transform_map_data(raw_data)
 plot_knowledge_map(ready_data)
 ```
 
-## Block-wise Arrangement 
+## 2 Block-wise Arrangement 
 
 ```{r}
 #| echo: false
