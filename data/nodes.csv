@@ -1,17 +1,17 @@
-id,label,column,row,name
-511,DSCI 511,2,5,Programming for Data Science
-523,DSCI 523,2,2,Data Wrangling
-521,DSCI 521,1,4,Computing Platforms for Data Science
-551,DSCI 551,4,2,Descriptive Statistics and Probability
-512,DSCI 512,3,4,Algorithms and Data Structures
-552,DSCI 552,5,2,Statistical Inference and Computation I
-531,DSCI 531,3,3,Data Visualization I
-571,DSCI 571,4,5,Supervised Learning I
-573,DSCI 573,5,5,Feature and Model Selection
-561,DSCI 561,6,3,Regression I
-522,DSCI 522,4,7,Data Science Workflows
-513,DSCI 513,3,6,Database and Data Retrieval
-572,DSCI 572,6,5,Supervised Learning II
-562,DSCI 562,7,3,Regression II
-542,DSCI 542,4,1,Communication in Data Science
-524,DSCI 524,5,7,Collaborative Software Development
+id,label,column,row,name,block
+511,DSCI 511,2,5,Programming for Data Science,1
+523,DSCI 523,2,2,Data Wrangling,1
+521,DSCI 521,1,4,Computing Platforms for Data Science,1
+551,DSCI 551,4,2,Descriptive Statistics and Probability,1
+512,DSCI 512,3,4,Algorithms and Data Structures,2
+552,DSCI 552,5,2,Statistical Inference and Computation I,2
+531,DSCI 531,3,3,Data Visualization I,2
+571,DSCI 571,4,5,Supervised Learning I,2
+573,DSCI 573,5,5,Feature and Model Selection,3
+561,DSCI 561,6,3,Regression I,3
+522,DSCI 522,4,7,Data Science Workflows,3
+513,DSCI 513,3,6,Database and Data Retrieval,3
+572,DSCI 572,6,5,Supervised Learning II,4
+562,DSCI 562,7,3,Regression II,4
+542,DSCI 542,4,1,Communication in Data Science,4
+524,DSCI 524,5,7,Collaborative Software Development,4
