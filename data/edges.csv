@@ -11,10 +11,12 @@ from,to,concepts
 511,571,Python
 522,524,Github Workflows;Iterative Design;Modular Functions
 571,573,Linear Regression;Features
-573,572,Feature Engineering
+573,572,Feature Engineering;Regularization
 551,552,Normal Distribution
-551,562,MLE
+551,562,MLE; Survival Function
 552,561,Hypothesis Testing;Bootstrapping
 561,562,OLS
 561,573,"Loss (L1, L2);Linear Regression"
 562,572,Minimize Loss
+512,572,Dynamic Programming
+571,572,sklearn;Logistic Regression
