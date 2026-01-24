@@ -4,6 +4,20 @@
     "href": "index.html",
     "title": "MDS Knowledge Map",
     "section": "",
-    "text": "Hello this is test"
+    "text": "hover on a node to see course name\nhover on an edge to see the connecting concepts\nclick on a node to see all of its ‘to’ and ‘from’ connections\nuse the dropdown below to select a course"
+  },
+  {
+    "objectID": "index.html#arbitrary-arrangement",
+    "href": "index.html#arbitrary-arrangement",
+    "title": "MDS Knowledge Map",
+    "section": "",
+    "text": "hover on a node to see course name\nhover on an edge to see the connecting concepts\nclick on a node to see all of its ‘to’ and ‘from’ connections\nuse the dropdown below to select a course"
+  },
+  {
+    "objectID": "index.html#block-wise-arrangement",
+    "href": "index.html#block-wise-arrangement",
+    "title": "MDS Knowledge Map",
+    "section": "2 Block-wise Arrangement",
+    "text": "2 Block-wise Arrangement"
   }
 ]
